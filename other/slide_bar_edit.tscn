@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://4xrda0swe070"]
+
+[ext_resource type="Script" path="res://other/slide_bar_edit.gd" id="1_aa1lk"]
+[ext_resource type="LabelSettings" uid="uid://1vlabkxkvtfd" path="res://Assets/label_font.tres" id="1_jmyw1"]
+
+[node name="Node2D" type="HBoxContainer"]
+script = ExtResource("1_aa1lk")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "text"
+label_settings = ExtResource("1_jmyw1")
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
